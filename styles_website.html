@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050507">
+<meta name="description" content="Styles — a fictional next-generation technology company with MindOS, MindChip and quantum-inspired products.">
+<title>Styles — Think Beyond</title>
+<style>
+:root{
+  --bg:#050507;--bg2:#0b0b0f;--card:#111116;--card2:#17171e;--text:#f5f5f7;
+  --muted:#a1a1aa;--line:rgba(255,255,255,.1);--accent:#7c5cff;--accent2:#19d3ff;
+  --good:#5ee7a4;--max:1180px;--radius:28px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 50% -10%,#211a45 0,#08080b 35%,#050507 65%);
+color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Arial,sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+nav{position:sticky;top:0;z-index:50;background:rgba(5,5,7,.72);backdrop-filter:blur(22px);border-bottom:1px solid var(--line)}
+.navin{height:66px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:800;font-size:23px;letter-spacing:-1px}.logo span{color:var(--accent2)}
+.navlinks{display:flex;gap:22px;color:#c9c9d0;font-size:14px}.navlinks a:hover{color:white}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 19px;border-radius:999px;border:1px solid var(--line);font-weight:700;font-size:14px;transition:.25s}
+.btn.primary{background:white;color:#09090b;border-color:white}.btn.primary:hover{transform:translateY(-2px);box-shadow:0 10px 35px #fff2}
+.btn.dark:hover{background:#fff1}
+.hero{min-height:740px;display:grid;place-items:center;text-align:center;padding:100px 0 70px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,#6c4dff33,transparent 68%);filter:blur(8px);top:0}
+.kicker{position:relative;color:#9fdfff;font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:12px}
+h1{position:relative;font-size:clamp(58px,10vw,126px);line-height:.9;letter-spacing:-.075em;margin:20px 0;background:linear-gradient(120deg,#fff 25%,#bfc4ff 52%,#55e6ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{position:relative;max-width:700px;margin:25px auto;color:#b6b6bf;font-size:20px}
+.actions{position:relative;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hero-orbit{position:relative;width:min(720px,90vw);height:220px;margin:60px auto 0}
+.orbit{position:absolute;inset:0;border:1px solid #ffffff15;border-radius:50%;transform:rotate(-12deg)}
+.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:110px;height:110px;border-radius:28px;background:linear-gradient(145deg,#22223b,#0d0d13);box-shadow:0 0 90px #725cff66, inset 0 0 30px #fff1;display:grid;place-items:center;font-weight:900;font-size:22px}
+.dot{position:absolute;width:12px;height:12px;background:#5be4ff;border-radius:50%;box-shadow:0 0 22px #5be4ff;animation:float 4s ease-in-out infinite}
+.d1{left:8%;top:45%}.d2{right:9%;top:28%;background:#9c79ff;box-shadow:0 0 22px #9c79ff;animation-delay:1s}
+.d3{left:31%;top:8%;background:#fff;animation-delay:2s}
+@keyframes float{50%{transform:translateY(-15px) scale(1.3)}}
+section{padding:100px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:35px}
+.eyebrow{color:#8f8f9a;font-size:13px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+h2{font-size:clamp(36px,6vw,68px);letter-spacing:-.055em;line-height:1;margin:10px 0}
+.lead{color:var(--muted);max-width:620px;font-size:17px}
+.products{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.product{min-height:430px;padding:26px;border-radius:var(--radius);background:linear-gradient(150deg,#15151c,#0c0c10);border:1px solid var(--line);position:relative;overflow:hidden;transition:.3s}
+.product:hover{transform:translateY(-6px);border-color:#ffffff25}
+.product:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-70px;top:-70px;background:var(--glow,#775cff);filter:blur(45px);opacity:.22}
+.product h3{font-size:25px;margin:7px 0}.product p{color:#9c9ca6;font-size:14px}
+.product .visual{height:185px;display:grid;place-items:center;margin-bottom:10px}
+.phone{width:88px;height:158px;border:4px solid #777;border-radius:23px;background:linear-gradient(145deg,#171725,#050508);box-shadow:0 20px 60px #000}
+.tablet{width:145px;height:102px;border:4px solid #777;border-radius:17px;background:linear-gradient(145deg,#202033,#050508)}
+.laptop{width:170px;height:105px;border:4px solid #777;border-radius:12px;background:#101018;position:relative}
+.laptop:after{content:"";position:absolute;left:-18px;right:-18px;bottom:-12px;height:10px;border-radius:50%;background:#777}
+.watch{width:75px;height:88px;border-radius:22px;background:#14141c;border:4px solid #777;box-shadow:0 0 0 18px #7772}
+.os{width:145px;height:100px;border-radius:18px;background:linear-gradient(135deg,#7c5cff,#19d3ff);box-shadow:0 0 60px #7c5cff66;display:grid;place-items:center;font-weight:900;font-size:22px}
+.chip{display:inline-block;border:1px solid #ffffff18;background:#ffffff08;border-radius:999px;padding:6px 9px;font-size:11px;color:#d7d7df;margin-top:8px}
+.compare{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:1px;border:1px solid var(--line);border-radius:25px;overflow:hidden;background:var(--line)}
+.compare div{padding:17px;background:#0c0c10;color:#bcbcc5}.compare .head{font-weight:800;color:white;background:#15151c}.compare .styles{color:#fff;background:#16132a}
+.speed{margin-top:35px;padding:25px;border-radius:25px;background:linear-gradient(100deg,#17152a,#0d151b);border:1px solid #ffffff12}
+.bar{height:12px;background:#22232a;border-radius:99px;overflow:hidden;margin-top:12px}.bar span{display:block;height:100%;width:100%;background:linear-gradient(90deg,#7c5cff,#19d3ff);border-radius:inherit}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.feature{padding:25px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,#121218,#0a0a0d)}
+.icon{font-size:28px}.feature h3{margin:12px 0 7px;font-size:19px}.feature p{margin:0;color:#9d9da7;font-size:14px}
+.quantum{border-radius:34px;padding:60px;background:radial-gradient(circle at 80% 30%,#634cff44,transparent 35%),linear-gradient(135deg,#11111a,#08080b);border:1px solid var(--line);overflow:hidden;position:relative}
+.quantum h2{max-width:700px}.qchips{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.qchips span{padding:9px 13px;border:1px solid #ffffff18;border-radius:999px;background:#fff1;color:#d7d7e0;font-size:13px}
+details{border-top:1px solid var(--line);padding:22px 0}details:last-child{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-size:18px;font-weight:750}details p{color:#a4a4ae;max-width:900px;margin-bottom:0}
+footer{border-top:1px solid var(--line);padding:55px 0;color:#777780;font-size:13px}.footergrid{display:flex;justify-content:space-between;gap:30px}.footerlogo{font-size:25px;font-weight:900;color:white}
+@media(max-width:950px){.products{grid-template-columns:repeat(2,1fr)}.feature-grid{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}}
+@media(max-width:600px){.container{width:min(100% - 28px,var(--max))}.products,.feature-grid{grid-template-columns:1fr}.hero{min-height:650px;padding-top:75px}.hero p{font-size:17px}.section-head{display:block}.compare{font-size:13px}.quantum{padding:35px 24px}.footergrid{display:block}.footergrid>*+*{margin-top:20px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container navin">
+    <a class="logo" href="#top">styles<span>°</span></a>
+    <div class="navlinks">
+      <a href="#products">Products</a><a href="#mindos">MindOS</a><a href="#features">Features</a><a href="#quantum">Quantum</a>
+    </div>
+    <a class="btn primary" href="#products">Explore</a>
+  </div>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <div class="container">
+    <div class="kicker">Introducing the Styles ecosystem</div>
+    <h1>Think beyond.</h1>
+    <p>Meet a new generation of devices powered by <b>MindOS</b>, MindChip silicon and a fictional quantum-inspired computing architecture — designed to make your everyday technology feel effortless.</p>
+    <div class="actions"><a class="btn primary" href="#products">Explore products ↓</a><a class="btn dark" href="#features">See what it can do</a></div>
+    <div class="hero-orbit"><div class="orbit"></div><div class="core">MIND</div><i class="dot d1"></i><i class="dot d2"></i><i class="dot d3"></i></div>
+  </div>
+</section>
+
+<section id="products">
+<div class="container">
+ <div class="section-head"><div><div class="eyebrow">The lineup</div><h2>One ecosystem.<br>Five new ideas.</h2></div><p class="lead">From your pocket to your wrist, Styles products share one visual language, one account, and one intelligent operating system.</p></div>
+ <div class="products">
+  <article class="product" style="--glow:#7c5cff"><div class="visual"><div class="phone"></div></div><div class="eyebrow">Revolutionary smartphone</div><h3>Styles Phone</h3><p>Adaptive cameras, satellite-ready communication, on-device intelligence and a seamless MindOS experience.</p><span class="chip">MindChip50</span></article>
+  <article class="product" style="--glow:#19d3ff"><div class="visual"><div class="tablet"></div></div><div class="eyebrow">Big-screen creativity</div><h3>Styles Tablet</h3><p>A powerful canvas for drawing, studying, gaming and multitasking with a desktop-class interface.</p><span class="chip">MindChip500</span></article>
+  <article class="product" style="--glow:#6ee7b7"><div class="visual"><div class="laptop"></div></div><div class="eyebrow">Pro productivity</div><h3>Styles Laptop</h3><p>Quiet performance, instant wake, secure hardware and a flexible windowing system built around MindOS.</p><span class="chip">MindChip5000</span></article>
+  <article class="product" style="--glow:#ff7ac8"><div class="visual"><div class="watch"></div></div><div class="eyebrow">Your day, at a glance</div><h3>Styles Watch</h3><p>Notifications, navigation, fitness tools, emergency communication and customizable watch faces.</p><span class="chip">MindChip5</span></article>
+  <article class="product" style="--glow:#f6c85f"><div class="visual"><div class="os">M</div></div><div class="eyebrow">The heart of it all</div><h3>MindOS</h3><p>A cross-device operating system with continuity, privacy controls, widgets, AI tools and deep customization.</p><span class="chip">All devices</span></article>
+ </div>
+</div>
+</section>
+
+<section id="mindos">
+<div class="container">
+ <div class="section-head"><div><div class="eyebrow">Operating system</div><h2>MindOS.<br>One mind, everywhere.</h2></div><p class="lead">The fictional Styles platform unifies phone, tablet, laptop and watch so your work and information can move with you.</p></div>
+ <div class="compare">
+  <div class="head">Capability</div><div class="head styles">Styles / MindOS</div><div class="head">Modern ecosystem baseline</div>
+  <div>Cross-device continuity</div><div class="styles">Instant handoff + universal clipboard</div><div>Common across premium ecosystems</div>
+  <div>Personal assistant</div><div class="styles">Mind AI, with on-device processing modes</div><div>AI assistants and contextual tools</div>
+  <div>Customization</div><div class="styles">Themes, widgets, layouts, controls</div><div>Varies by platform</div>
+  <div>Privacy</div><div class="styles">Permission dashboard + local processing options</div><div>App permissions and security controls</div>
+ </div>
+ <div class="speed"><b>MindChip performance concept</b><br><span style="color:#a5a5ae">Marketing concept: Styles claims up to 2× the performance of a hypothetical current fastest-market chip. This is fictional and not a verified benchmark.</span><div class="bar"><span></span></div></div>
+</div>
+</section>
+
+<section id="features">
+<div class="container">
+ <div class="section-head"><div><div class="eyebrow">Feature universe</div><h2>Everything you expect.<br>Plus a few surprises.</h2></div><p class="lead">This fictional product concept combines familiar smartphone capabilities with ideas associated with past mobile platforms. It does not claim ownership of or reproduce proprietary implementations.</p></div>
+ <div class="feature-grid">
+  <article class="feature"><div class="icon">📷</div><h3>Computational photography</h3><p>Multi-camera capture, night photography, portrait effects, HDR, panorama, stabilization, RAW/Pro controls, cinematic video and AI-assisted photo cleanup.</p></article>
+  <article class="feature"><div class="icon">🤖</div><h3>Mind AI</h3><p>Summarization, writing assistance, translation, visual search, call notes, generative editing, contextual suggestions and on-device processing options.</p></article>
+  <article class="feature"><div class="icon">🔗</div><h3>Continuity</h3><p>Copy on one device and paste on another, move calls and media between screens, share files nearby, and continue compatible tasks instantly.</p></article>
+  <article class="feature"><div class="icon">🖊️</div><h3>Creator mode</h3><p>Stylus support, pressure-aware drawing, low-latency handwriting, desktop-style multitasking and color-managed creative workflows.</p></article>
+  <article class="feature"><div class="icon">🛰️</div><h3>Resilient communication</h3><p>Wi-Fi calling, emergency messaging concepts, offline location sharing and satellite-ready architecture where supported by hardware and regulations.</p></article>
+  <article class="feature"><div class="icon">🔐</div><h3>Private by design</h3><p>Secure hardware, encrypted storage, biometric authentication, permission controls, anti-phishing warnings and an app privacy dashboard.</p></article>
+  <article class="feature"><div class="icon">🪟</div><h3>Desktop everywhere</h3><p>Split-screen, floating windows, external display support, keyboard shortcuts, file management and laptop-style workflows on larger devices.</p></article>
+  <article class="feature"><div class="icon">🎮</div><h3>Game mode</h3><p>High-refresh displays, adaptive performance, low-latency networking, controller support, recording tools and a distraction-free gaming dashboard.</p></article>
+  <article class="feature"><div class="icon">⌚</div><h3>Watch intelligence</h3><p>Custom faces, notifications, timers, navigation, music controls, activity trends and safety features with user-controlled permissions.</p></article>
+  <article class="feature"><div class="icon">📡</div><h3>Classic mobile ideas</h3><p>FM-radio-style concepts, removable-style storage compatibility, infrared-control concepts, physical navigation modes and other nostalgic ideas can be explored where hardware permits.</p></article>
+  <article class="feature"><div class="icon">📱</div><h3>Fold & multitask</h3><p>Adaptive layouts can support large screens, foldable-style form factors, app pairs, one-handed modes and picture-in-picture experiences.</p></article>
+  <article class="feature"><div class="icon">🌐</div><h3>Smart connectivity</h3><p>5G/modern cellular support, Wi-Fi, Bluetooth, NFC, UWB-style spatial awareness, hotspot sharing and device-to-device discovery.</p></article>
+ </div>
+</div>
+</section>
+
+<section id="quantum">
+<div class="container">
+ <div class="quantum">
+  <div class="eyebrow">Quantum technology</div>
+  <h2>Not just faster.<br>Built around new possibilities.</h2>
+  <p class="lead">In this fictional concept, “quantum” refers to a hybrid architecture that pairs conventional high-performance processors with quantum-inspired optimization and specialized accelerators. Real quantum computers are not simply drop-in replacements for smartphone CPUs.</p>
+  <div class="qchips"><span>Quantum-inspired optimization</span><span>Secure enclave</span><span>AI accelerator</span><span>Photonic interconnect concept</span><span>Adaptive power management</span></div>
+ </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+ <div class="eyebrow">Feature deep dive</div><h2>How the experience works.</h2>
+ <div style="margin-top:30px">
+  <details open><summary>What does “2× faster” mean here?</summary><p>It is a fictional marketing specification for this concept site, not a verified real-world measurement. A real product would need controlled benchmarks, a named comparison chip, workloads, power limits, thermal conditions and independent testing before such a claim could be established.</p></details>
+  <details><summary>What are the MindChips?</summary><p>MindChip5, MindChip50, MindChip500 and MindChip5000 are fictional chip families assigned to the Styles Watch, Phone, Tablet and Laptop respectively. Higher numbers represent the intended product tier, not a real performance score.</p></details>
+  <details><summary>What features are inspired by existing phones?</summary><p>The concept groups broadly known capabilities—computational photography, stylus input, multitasking, continuity, AI assistance, secure biometrics, customization, satellite communication concepts, desktop modes and wearable integration—without presenting another company's proprietary implementation as Styles technology.</p></details>
+  <details><summary>What about “dead” smartphone features?</summary><p>Styles treats discontinued ideas as a nostalgia lab: physical keyboards, notification LEDs, removable-style storage, 3.5 mm audio concepts, infrared control and FM-radio-style functionality. Actual support would depend on device hardware, regulations and engineering tradeoffs.</p></details>
+ </div>
+</div>
+</section>
+</main>
+
+<footer>
+ <div class="container footergrid">
+  <div><div class="footerlogo">styles°</div><div>Think beyond. © 2026 Styles — fictional concept brand.</div></div>
+  <div>MindOS · MindChip · Phone · Tablet · Laptop · Watch</div>
+ </div>
+</footer>
+</body>
+</html>
